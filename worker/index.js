@@ -10,7 +10,7 @@ function fib(index) { // this is slow
     if (index < 2) return 1;
     return fib(index - 1) + fib(index - 2);
 }
-sub.on('insert', (channel, message) => {
+sub.on('message', (channel, message) => {
     redisClient.hset('values', message, fib(parseInt(message)));
 });
-sub.subscribe('insert');
+sub.subscribe('fib-index');
