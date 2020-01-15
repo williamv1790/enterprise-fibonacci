@@ -19,3 +19,15 @@ after_success:
     - docker push willasv/enterprise-fibonacci-nginx
     - docker push willasv/enterprise-fibonacci-server
     - docker push willasv/enterprise-fibonacci-worker
+    deploy:
+        edge: true # forces v2
+        provider: elasticbeanstalk
+        region: "us-east-1"
+        app: "enterprise-fibonacci"
+        env: "EnterpriseFibonacci-env"
+        bucket_name: "elasticbeanstalk-us-east-1-799963562734"
+        bucket_path: "enterprise-fibonacci"
+        on:
+            branch: master
+        access_key_id: $AWS_ACCESS_KEY
+        secret_access_key: $AWS_SECRET_KEY
