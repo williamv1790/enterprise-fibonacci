@@ -14,7 +14,7 @@ function App() {
           <Link to='/'>Home</Link>
           <Link to='/other'>Other</Link>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Welcome to the Fibonacci calculator
           </p>
           <a
             className="App-link"
