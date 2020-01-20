@@ -14,7 +14,7 @@ function App() {
           <Link to='/'>Home</Link>
           <Link to='/other'>Other</Link>
           <p>
-            Welcome to the Fibonacci calculator
+            Welcome to the Fibonacci calculator v2.0.12.12
           </p>
           <a
             className="App-link"
