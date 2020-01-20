@@ -2,6 +2,8 @@ version: '3'
 services: # service names are hostnames
     postgres:
         image: 'postgres:latest'
+        environment:
+            - POSTGRES_PASSWORD=*#postgreS9009#*
     redis:
         image: 'redis:latest'
     api:
@@ -19,7 +21,7 @@ services: # service names are hostnames
             - PG_HOST=postgres 
             - PG_USER=postgres
             - PG_PASSWORD=*#postgreS9009#*
-            - PG_DATABASE=enterprisefibonacci
+            - PG_DATABASE=postgres
             - PG_PORT=5432
     client:
         build:
